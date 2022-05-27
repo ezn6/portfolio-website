@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+/* Global */
+:root {
+  /* Color */
+  --blue: #42b4e6;
+  --light-blue: #69cad3;
+  --black: #434343;
+  --white: #ffffff;
+  --dark-grey: #4d4d4d;
+  --grey: #616161;
+  --light-grey: #7c7979;
+  --pink: #ef8a92;
+  --yellow: #fcf955;
+  --green: #6cc580;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-regular: 400;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  /* Size */
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* Typography */
+/* h1, h2, h3, p */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-extrabold);
+  color: var(--black);
+  margin: 16px 0;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+  color: var(--black);
+  margin: 10px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  color: var(--black);
+  margin: 10px 0;
+}
+
+p {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  color: var(--black);
+  margin: 8px 0;
+}
