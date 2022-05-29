@@ -17,10 +17,10 @@
 
   /* Font size */
   --font-large: 38px;
-  --font-medium: 24px;
-  --font-regular: 18px;
-  --font-small: 16px;
-  --font-micro: 14px;
+  --font-medium: 20px;
+  --font-regular: 16px;
+  --font-small: 14px;
+  --font-micro: 12px;
 
   /* Font weight */
   --weight-regular: 400;
@@ -40,8 +40,14 @@
 body {
   cursor: default;
 }
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
 /* Typography */
-/* h1, h2, h3, p */
 h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-extrabold);
@@ -107,4 +113,36 @@ p {
 
 .navbar__menu--item:hover {
   background-color: var(--blue);
+}
+
+/* Home */
+#home {
+  background: url('imgs/background.png');
+  background-repeat: no-repeat;
+  background-position: 25% 75%;
+  background-size: cover;
+  padding: 30px;
+  text-align: center;
+}
+
+.home__profile {
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  border: 1px solid var(--white);
+}
+
+.home__title,
+.home__description,
+.home__contact {
+  color: var(--white);
+  /* color: var(--light-grey); */
+}
+
+.home__contact {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--white);
+  margin: 24px;
+  padding: 8px 12px;
+  font-weight: var(--weight-bold);
 }
