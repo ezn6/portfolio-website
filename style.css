@@ -8,6 +8,7 @@
   --light-blue: #69cad3;
   --black: #434343;
   --white: #ffffff;
+  --dark-white: #bdbdbd;
   --dark-grey: #4d4d4d;
   --grey: #616161;
   --light-grey: #919191;
@@ -329,6 +330,7 @@ p {
 
 .project {
   background-color: #bfeaff;
+  border-radius: var(--border-radius);
   margin: 2px;
   width: 280px;
   height: 250px;
@@ -349,6 +351,7 @@ p {
   top: 0;
   left: 0;
   background-color: black;
+  border-radius: var(--border-radius);
   color: var(--white);
   width: 100%;
   height: 100%;
@@ -378,6 +381,9 @@ p {
 }
 
 /* Testimonials */
+#testimonials {
+  background-color: var(--yellow);
+}
 .testimonials {
   margin: 50px 0;
 }
@@ -403,20 +409,45 @@ p {
 }
 
 .testimonial__speech-bubble {
-  background-color: var(--yellow);
+  border-radius: var(--border-radius);
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 10px;
 }
 .testimonial__speech-bubble p {
   line-height: 20px;
 }
 
-.name {
+.name a {
   font-weight: var(--weight-bold);
   text-decoration: underline;
 }
-.name:hover {
+.name a:hover {
   color: orange;
   cursor: pointer;
+}
+
+/* Contact */
+#contact {
+  background-color: var(--dark-white);
+  color: var(--white);
+  padding-top: 20px;
+  /* padding-bottom: 20px; */
+  /* margin-top: 100px; */
+}
+
+.contact__links {
+  margin: 30px 0 15px 0;
+}
+
+.contact__links i {
+  font-size: var(--font-large);
+  margin: 0 4px;
+  transition: var(--transition);
+}
+
+.contact__links i:hover {
+  transform: scale(1.3);
 }
