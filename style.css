@@ -162,6 +162,9 @@ p {
   padding: 8px 12px;
   font-weight: var(--weight-extrabold);
 }
+.home__contact:hover {
+  background-color: var(--blue);
+}
 
 /* Section common */
 .section {
