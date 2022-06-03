@@ -78,12 +78,20 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--light-blue);
+  background-color: transparent;
   padding: 16px;
   color: var(--white);
+  transition: all 600ms ease-in-out;
+}
+#navbar.navbar--dark {
+  background-color: var(--light-blue);
+  padding-top: 8px;
+  z-index: 1;
 }
 
 .navbar__logo {
@@ -129,6 +137,7 @@ p {
   background-position: 25% 75%;
   background-size: cover;
   padding: 30px;
+  padding-top: 120px;
   text-align: center;
 }
 
@@ -295,7 +304,7 @@ p {
   border: 1px solid var(--light-grey);
   border-radius: var(--border-radius);
   font-weight: var(--weight-bold);
-  padding: 8px 40px;
+  padding: 8px 28px 8px 40px;
   margin: 2px;
   background-color: var(--white);
   color: var(--black);
