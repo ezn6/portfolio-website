@@ -87,11 +87,11 @@ p {
   padding: 16px;
   color: var(--white);
   transition: all 600ms ease-in-out;
+  z-index: 1;
 }
 #navbar.navbar--dark {
   background-color: var(--light-blue);
   padding-top: 8px;
-  z-index: 1;
 }
 
 .navbar__logo {
@@ -160,7 +160,7 @@ p {
   border: 1px solid var(--white);
   margin: 24px;
   padding: 8px 12px;
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-extrabold);
 }
 
 /* Section common */
