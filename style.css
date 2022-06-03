@@ -86,7 +86,7 @@ p {
   background-color: transparent;
   padding: 16px;
   color: var(--white);
-  transition: all 600ms ease-in-out;
+  transition: all 500ms ease-out;
   z-index: 1;
 }
 #navbar.navbar--dark {
@@ -139,6 +139,9 @@ p {
   padding: 30px;
   padding-top: 120px;
   text-align: center;
+}
+.home__container {
+  transition: all 500ms ease-out;
 }
 
 .home__profile {
