@@ -177,6 +177,7 @@ p {
 }
 .section__container {
   max-width: 1200px;
+  margin: auto;
 }
 
 /* About */
@@ -348,6 +349,11 @@ p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  transition: all 300ms ease-out;
+}
+.work__projects.animation {
+  transform: scale(0.98) translateY(20px);
+  opacity: 0;
 }
 
 .project {
@@ -360,6 +366,10 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project__img {

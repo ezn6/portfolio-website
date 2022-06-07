@@ -15,10 +15,6 @@ document.addEventListener('scroll', () => {
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
   const id = event.target.dataset.link;
-  const target = event.target;
-  const link = target.dataset.link;
-  console.log(`id : ${id}`);
-  console.log(`link: ${link}`);
   if (id == null) {
     return;
   }
@@ -48,10 +44,32 @@ document.addEventListener('scroll', () => {
   }
 });
 // Handle click on the "arrow up" button
-upBtn.addEventListener('click', (event) => {
-  // navbar로 스크롤 하면 안되는 이유? #home으로는 스크롤 된다.
+upBtn.addEventListener('click', () => {
   scrollIntoView('#home');
-  // scrollIntoView('#navbar');
+});
+
+// Click the Project button to divide by category
+const categoryBtn = document.querySelector('.work__categories');
+const projects = document.querySelectorAll('.project');
+const projectContainer = document.querySelector('.work__projects'); //animation
+categoryBtn.addEventListener('click', (event) => {
+  const filter =
+    event.target.dataset.category || event.target.parentNode.dataset.category;
+  if (filter == null) {
+    return;
+  }
+
+  projectContainer.classList.add('animation');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === 'all' || project.dataset.type === filter) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('animation');
+  }, 300);
 });
 
 function scrollIntoView(selector) {
