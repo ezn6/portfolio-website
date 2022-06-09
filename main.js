@@ -52,13 +52,25 @@ upBtn.addEventListener('click', () => {
 const categoryBtn = document.querySelector('.work__categories');
 const projects = document.querySelectorAll('.project');
 const projectContainer = document.querySelector('.work__projects'); //animation
+const buttons = document.querySelectorAll('.category__btn');
 categoryBtn.addEventListener('click', (event) => {
   const filter =
     event.target.dataset.category || event.target.parentNode.dataset.category;
+
+  //change button state
+  buttons.forEach((btn) => {
+    if (btn.classList[1]) {
+      btn.classList.remove('active');
+    }
+    if (btn.parentNode.classList[1]) {
+      btn.parentNode.classList.remove('active');
+    }
+  });
+  event.target.classList.add('active');
+
   if (filter == null) {
     return;
   }
-
   projectContainer.classList.add('animation');
   setTimeout(() => {
     projects.forEach((project) => {
@@ -71,6 +83,8 @@ categoryBtn.addEventListener('click', (event) => {
     projectContainer.classList.remove('animation');
   }, 300);
 });
+
+// Navbar toggle button
 
 function scrollIntoView(selector) {
   document.querySelector(selector).scrollIntoView({ behavior: 'smooth' });
