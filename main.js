@@ -52,25 +52,20 @@ upBtn.addEventListener('click', () => {
 const categoryBtn = document.querySelector('.work__categories');
 const projects = document.querySelectorAll('.project');
 const projectContainer = document.querySelector('.work__projects'); //animation
-const buttons = document.querySelectorAll('.category__btn');
 categoryBtn.addEventListener('click', (event) => {
   const filter =
     event.target.dataset.category || event.target.parentNode.dataset.category;
-
-  //change button state
-  buttons.forEach((btn) => {
-    if (btn.classList[1]) {
-      btn.classList.remove('active');
-    }
-    if (btn.parentNode.classList[1]) {
-      btn.parentNode.classList.remove('active');
-    }
-  });
-  event.target.classList.add('active');
-
   if (filter == null) {
     return;
   }
+
+  // Remove selection from the previous item and select the new one
+  const active = document.querySelector('.category__btn.active');
+  active.classList.remove('active');
+  const target =
+    event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+  target.classList.add('active');
+
   projectContainer.classList.add('animation');
   setTimeout(() => {
     projects.forEach((project) => {

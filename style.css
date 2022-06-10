@@ -113,11 +113,12 @@ p {
   border-radius: var(--border-radius);
 }
 
-.navbar__menu--item.active {
+/* .navbar__menu--item.active {
   border: 1px solid var(--white);
-}
+} */
 
 .navbar__menu--item:hover {
+  /* border: 1px solid var(--white); */
   background-color: var(--blue);
 }
 
