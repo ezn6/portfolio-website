@@ -518,6 +518,9 @@ p {
     width: 100%;
     display: none;
   }
+  .navbar__menu.open {
+    display: block;
+  }
 
   .navbar__menu--item.active {
     border: none;
